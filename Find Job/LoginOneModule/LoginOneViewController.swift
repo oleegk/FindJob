@@ -11,13 +11,12 @@ import UIKit
 class LoginOneViewController: UIViewController {
 
     var viewModel: LoginOneViewModel?
-    var button = UIButton(frame: CGRect(x: 100, y: 159, width: 70, height: 70))
     
     private lazy var topLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Вход в личный кабинет"
-        label.textColor = .label
+        label.textColor = .white
         label.font = .boldSystemFont(ofSize: 20)
         return label
     }()
@@ -64,6 +63,7 @@ class LoginOneViewController: UIViewController {
         view.contentVerticalAlignment = .center
         view.clearButtonMode = .whileEditing
         view.font = .boldSystemFont(ofSize: 14)
+        view.textColor = .white
         
         view.keyboardType = .emailAddress
         
@@ -79,6 +79,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Войти с паролем"
         label.textColor = Constants.Color.blue
+        label.font = .systemFont(ofSize: 15)
         label.textAlignment = .right
         return label
     }()
@@ -102,7 +103,6 @@ class LoginOneViewController: UIViewController {
         button.layer.shadowRadius = 4
         
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
-        
         return button
     }()
     
@@ -163,12 +163,14 @@ class LoginOneViewController: UIViewController {
     }()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        moveViewUpAndDown()
         setupView()
         setupConstraints()
     }
+    
     
     @objc func emailTextFieldDidChange(_ textField: UITextField) {
         emailTextField.layer.borderColor = Constants.Color.grey2.cgColor
@@ -181,29 +183,19 @@ class LoginOneViewController: UIViewController {
             continueButton.backgroundColor = Constants.Color.nonActiveBlue
         }
     }
-
     
     @objc func tapButton() {
         guard let email = emailTextField.text, !email.isEmpty else { return }
-        
-        if isValidEmail(email) {
-            viewModel?.didTapButton()
+        if viewModel?.isValidEmail(email) ?? false {
+            viewModel?.didTapButton(email)
         } else {
             emailTextField.layer.borderColor = Constants.Color.red.cgColor
             invalidEmailLabel.isHidden = false
         }
     }
     
-    
-    func isValidEmail(_ email: String) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-        
-        return emailPredicate.evaluate(with: email)
-    }
-    
     func setupView() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .black
         view.addSubview(topLabel)
         view.addSubview(findJobView)
         findJobView.addSubview(findJobLabel)
@@ -217,6 +209,7 @@ class LoginOneViewController: UIViewController {
         
         findJobView.addSubview(invalidEmailLabel)
         invalidEmailLabel.isHidden = true
+        emailTextField.delegate = self
     }
     
     func setupConstraints() {
@@ -280,3 +273,10 @@ class LoginOneViewController: UIViewController {
     }
 }
 
+
+extension LoginOneViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

@@ -9,6 +9,7 @@ import UIKit
 
 
 class LoginTwoViewModel {
+    var email = ""
     
     var registrationCompleted = false
     weak var coordinator: LoginTwoViewControllerCoordinator?
@@ -21,6 +22,7 @@ class LoginTwoViewModel {
         print("tapButton LoginTwoViewModel")
         coordinator?.openSearchScreen()
     }
+    
     
     func deleteOneVC() {
         if let viewControllers = coordinator?.navigationController?.viewControllers {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A09F55B2BA36844006671B6 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F55A2BA36844006671B6 /* CodeView.swift */; };
 		5A62FE022BA233E000743E93 /* LoginTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE012BA233E000743E93 /* LoginTwoViewController.swift */; };
 		5A62FE042BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE032BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift */; };
 		5A62FE062BA2340700743E93 /* LoginTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE052BA2340700743E93 /* LoginTwoViewModel.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A09F55A2BA36844006671B6 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		5A62FE012BA233E000743E93 /* LoginTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoViewController.swift; sourceTree = "<group>"; };
 		5A62FE032BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		5A62FE052BA2340700743E93 /* LoginTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoViewModel.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				5A62FE012BA233E000743E93 /* LoginTwoViewController.swift */,
 				5A62FE032BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift */,
 				5A62FE052BA2340700743E93 /* LoginTwoViewModel.swift */,
+				5A09F55A2BA36844006671B6 /* CodeView.swift */,
 			);
 			path = LoginTwoModule;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				5A7C67D52BA1DB5D003CC159 /* MessagesViewController.swift in Sources */,
 				5A7C67C82BA1CFAB003CC159 /* AppCoordinator.swift in Sources */,
 				5A62FE0B2BA3094B00743E93 /* Constants.swift in Sources */,
+				5A09F55B2BA36844006671B6 /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

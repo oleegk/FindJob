@@ -16,18 +16,19 @@ class CustomTabBarController: UITabBarController {
         super.viewDidLoad()
         
         self.delegate = self
+        tabBar.barStyle = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        selectedIndex = 1 
+        selectedIndex = 1
+        
     }
 }
 
 extension CustomTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print(registrationCompleted)
         if !registrationCompleted {
             selectedIndex = 1
         }

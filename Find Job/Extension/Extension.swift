@@ -30,3 +30,20 @@ extension UITextField {
     }
 }
 
+extension UIViewController {
+     func moveViewUpAndDown() {
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { (nc) in
+            self.view.frame.origin.y = -100
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { (nc) in
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    func setupNavBarAndItem() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.hidesBackButton = true
+    }
+}
+

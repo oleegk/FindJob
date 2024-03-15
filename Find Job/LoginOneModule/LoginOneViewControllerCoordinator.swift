@@ -21,13 +21,13 @@ class LoginOneViewControllerCoordinator: BaseCoordinator {
         navigationController.viewControllers = [loginOneViewController]
     }
     
-    func openLoginTwoScreen(){
+    func openLoginTwoScreen(_ email: String){
         let loginTwoViewControllerCoordinator = LoginTwoViewControllerCoordinator()
         loginTwoViewControllerCoordinator.navigationController = navigationController
         add(coordinator: loginTwoViewControllerCoordinator)
         loginTwoViewControllerCoordinator.start()
+        loginTwoViewControllerCoordinator.loginTwoViewModel.email = email
         loginTwoViewControllerCoordinator.loginTwoViewModel.tabBarController = parentCoordinator?.tabBarController
-
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {

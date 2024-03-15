@@ -11,6 +11,7 @@ enum Constants {
     enum Color {
         static let grey1 = UIColor(red: 0x22/255, green: 0x23/255, blue: 0x25/255, alpha: 1.0)
         static let grey2 = UIColor(red: 0x31/255, green: 0x32/255, blue: 0x34/255, alpha: 1.0)
+        static let grey3 = UIColor(red: 0x85/255, green: 0x86/255, blue: 0x88/255, alpha: 1.0)
         static let grey4 = UIColor(red: 0x9F/255, green: 0x9F/255, blue: 0x9F/255, alpha: 1.0)
         static let nonActiveBlue = UIColor(red: 0x00/255, green: 0x42/255, blue: 0x7D/255, alpha: 1.0)
         static let blue = UIColor(red: 0x2B/255, green: 0x7E/255, blue: 0xFE/255, alpha: 1.0)
@@ -19,3 +20,4 @@ enum Constants {
         static let red = UIColor(red: 0xFF/255, green: 0x00/255, blue: 0x00/255, alpha: 1.0)
     }
 }
+

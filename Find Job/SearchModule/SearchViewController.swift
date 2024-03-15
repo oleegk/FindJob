@@ -15,10 +15,11 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        
     }
     
     func setupView() {
-        view.backgroundColor = .systemGray2
+        view.backgroundColor = .black
     }
 }
 

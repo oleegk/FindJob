@@ -15,6 +15,7 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        setupNavBarAndItem()
     }
     
     func setupView() {
