@@ -19,11 +19,8 @@ class LoginTwoViewModel {
     func didTapButton() {
         tabBarController?.registrationCompleted = true
         tabBarController?.selectedIndex = 0
-        print("tapButton LoginTwoViewModel")
         coordinator?.openSearchScreen()
     }
-    
-    
     func deleteOneVC() {
         if let viewControllers = coordinator?.navigationController?.viewControllers {
             for viewController in viewControllers {

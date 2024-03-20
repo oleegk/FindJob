@@ -9,11 +9,17 @@ import UIKit
 
 class TabBarCoordinator: BaseCoordinator {
     
+    var vacancies: [Vacancy]
+    
+    init(vacancies: [Vacancy]) {
+        self.vacancies = vacancies
+    }
+    
     var tabBarController = CustomTabBarController()
     
     override func start() {
 
-        let searchViewControllerCoordinator = SearchViewControllerCoordinator()
+        let searchViewControllerCoordinator = SearchViewControllerCoordinator(vacancies: vacancies)
         let loginOneViewControllerCoordinator = LoginOneViewControllerCoordinator()
         let responsesViewControllerCoordinator = ResponsesViewControllerCoordinator()
         let messagesViewControllerCoordinator = MessagesViewControllerCoordinator()

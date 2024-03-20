@@ -47,3 +47,20 @@ extension UIViewController {
     }
 }
 
+
+extension UILabel {
+    convenience init(title: String) {
+        self.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        self.text = title
+    }
+}
+
+
+extension String {
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        return ceil(boundingBox.height)
+    }
+}

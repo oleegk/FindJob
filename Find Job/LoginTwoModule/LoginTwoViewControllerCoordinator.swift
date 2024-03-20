@@ -25,7 +25,6 @@ class LoginTwoViewControllerCoordinator: BaseCoordinator {
     }
     
     func openSearchScreen(){
-        print("openSearchScreen LoginTwoViewControllerCoordinator")
         let favoritesViewControllerCoordinator = FavoritesViewControllerCoordinator()
         favoritesViewControllerCoordinator.navigationController = navigationController
         add(coordinator: favoritesViewControllerCoordinator)

@@ -24,7 +24,7 @@ class LoginTwoViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Отправили код на \(viewModel?.email ?? "")"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = Constants.Fonts.SFProDisplaySemibold20Title2
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
@@ -37,7 +37,7 @@ class LoginTwoViewController: UIViewController {
         label.text = "Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет"
         label.numberOfLines = 0
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = Constants.Fonts.SFProDisplayMedium16Title3
         return label
     }()
     
@@ -52,7 +52,7 @@ class LoginTwoViewController: UIViewController {
         button.setTitle("Подтвердить", for: .disabled)
         button.setTitleColor(Constants.Color.grey4, for: .disabled)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = Constants.Fonts.SFProDisplaySemibold16ButtonText1
         
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         return button
@@ -70,6 +70,11 @@ class LoginTwoViewController: UIViewController {
         setupView()
         setupConstraint()
         setupNavBarAndItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     @objc func tapButton() {

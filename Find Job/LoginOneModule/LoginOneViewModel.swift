@@ -21,7 +21,6 @@ class LoginOneViewModel {
 }
 
 
-
 extension LoginOneViewModel: LoginViewModelProtocol {
     
     func isValidEmail(_ email: String) -> Bool {

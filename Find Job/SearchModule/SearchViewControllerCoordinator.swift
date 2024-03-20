@@ -9,11 +9,19 @@ import UIKit
 
 class SearchViewControllerCoordinator: BaseCoordinator {
     
+    var vacancies: [Vacancy]
+    
+    init(vacancies: [Vacancy]) {
+        self.vacancies = vacancies
+    }
+    
     var navigationController = UINavigationController()
     
     override func start() {
+        let searchViewModel = SearchViewModel(vacancies: vacancies)
         let searchViewController = SearchViewController()
-        searchViewController.coordinator = self
+        searchViewController.viewModel = searchViewModel
+        searchViewModel.coordinator = self
         navigationController.setViewControllers([searchViewController], animated: true)
         
     }

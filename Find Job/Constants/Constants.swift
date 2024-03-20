@@ -19,5 +19,16 @@ enum Constants {
         static let grayLight = UIColor(red: 0xDB/255, green: 0xDB/255, blue: 0xDB/255, alpha: 1.0)
         static let red = UIColor(red: 0xFF/255, green: 0x00/255, blue: 0x00/255, alpha: 1.0)
     }
+    
+    enum Fonts {
+        static let SFProDisplaySemibold22Title1 = UIFont(name: "SFProDisplay-Semibold", size: 22)
+        static let SFProDisplaySemibold20Title2 = UIFont(name: "SFProDisplay-Semibold", size: 20)
+        static let SFProDisplaySemibold16ButtonText1 = UIFont(name: "SFProDisplay-Semibold", size: 16)
+        static let SFProDisplayMedium16Title3 = UIFont(name: "SFProDisplay-Medium", size: 16)
+        static let SFProDisplayMedium14Title4 = UIFont(name: "SFProDisplay-Medium", size: 14)
+        static let SFProDisplayRegular14Text1andButtonText2 = UIFont(name: "SFProDisplay-Regular", size: 14)
+        static let SFProDisplayRegular10TabText = UIFont(name: "SFProDisplay-Regular", size: 10)
+        static let SFProDisplayRegular7Number = UIFont(name: "SFProDisplay-Regular", size: 7)
+    }
 }
 

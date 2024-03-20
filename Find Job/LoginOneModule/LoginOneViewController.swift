@@ -17,7 +17,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Вход в личный кабинет"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = Constants.Fonts.SFProDisplaySemibold20Title2
         return label
     }()
     
@@ -35,7 +35,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Поиск работы"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = Constants.Fonts.SFProDisplayMedium16Title3
         return label
     }()
     
@@ -62,7 +62,7 @@ class LoginOneViewController: UIViewController {
         
         view.contentVerticalAlignment = .center
         view.clearButtonMode = .whileEditing
-        view.font = .boldSystemFont(ofSize: 14)
+        view.font = Constants.Fonts.SFProDisplayRegular14Text1andButtonText2
         view.textColor = .white
         
         view.keyboardType = .emailAddress
@@ -79,7 +79,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Войти с паролем"
         label.textColor = Constants.Color.blue
-        label.font = .systemFont(ofSize: 15)
+        label.font = Constants.Fonts.SFProDisplayRegular14Text1andButtonText2
         label.textAlignment = .right
         return label
     }()
@@ -95,7 +95,7 @@ class LoginOneViewController: UIViewController {
         button.setTitle("Продолжить", for: .disabled)
         button.setTitleColor(Constants.Color.grey4, for: .disabled)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = Constants.Fonts.SFProDisplayRegular14Text1andButtonText2
 
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.4
@@ -120,7 +120,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Поиск сотрудников"
         label.textColor = .white
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = Constants.Fonts.SFProDisplayMedium16Title3
         return label
     }()
     
@@ -129,7 +129,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Размещение вакансий и доступ к базе резюме"
         label.textColor = .white
-        label.font = .systemFont(ofSize: 14)
+        label.font = Constants.Fonts.SFProDisplayRegular14Text1andButtonText2
         return label
     }()
     
@@ -142,7 +142,7 @@ class LoginOneViewController: UIViewController {
         button.setTitle("Я ищу сотрудников", for: .normal)
         
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.titleLabel?.font = Constants.Fonts.SFProDisplayRegular14Text1andButtonText2
         button.backgroundColor = Constants.Color.green
         
         button.layer.shadowColor = UIColor.black.cgColor
@@ -158,7 +158,7 @@ class LoginOneViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Вы ввели неверный e-mail"
         label.textColor = Constants.Color.red
-        label.font = .systemFont(ofSize: 13)
+        label.font = Constants.Fonts.SFProDisplayRegular14Text1andButtonText2
         return label
     }()
     
@@ -240,7 +240,7 @@ class LoginOneViewController: UIViewController {
             continueButton.heightAnchor.constraint(equalToConstant: 40),
             
             loginWithPassLabel.centerYAnchor.constraint(equalTo: continueButton.centerYAnchor),
-            loginWithPassLabel.trailingAnchor.constraint(equalTo: findJobView.trailingAnchor, constant: -18.0),
+            loginWithPassLabel.trailingAnchor.constraint(equalTo: findJobView.trailingAnchor, constant: -22.0),
             loginWithPassLabel.widthAnchor.constraint(equalToConstant: 140),
             loginWithPassLabel.heightAnchor.constraint(equalToConstant: 18),
             
