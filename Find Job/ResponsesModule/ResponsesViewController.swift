@@ -18,6 +18,6 @@ class ResponsesViewController: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .systemGray4
+        view.backgroundColor = .black
     }
 }

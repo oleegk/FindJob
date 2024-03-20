@@ -41,6 +41,11 @@ extension CollectionView: UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
+        cell.cellTappedClosure = { [weak self] in
+            
+            self?.viewModel?.openDetailScreen(for: indexPath.row, isFavorites: cell.isFavoriteImageView.isFavorite)
+        }
+
         if let vacancies = viewModel?.vacancies {
             cell.configure(vacancies[indexPath.row])
         }

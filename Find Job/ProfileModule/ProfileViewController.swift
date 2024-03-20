@@ -18,6 +18,6 @@ class ProfileViewController: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .black
     }
 }

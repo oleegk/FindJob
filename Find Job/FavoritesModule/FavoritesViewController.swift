@@ -19,6 +19,6 @@ class FavoritesViewController: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .black
     }
 }

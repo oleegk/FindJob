@@ -25,4 +25,13 @@ class SearchViewControllerCoordinator: BaseCoordinator {
         navigationController.setViewControllers([searchViewController], animated: true)
         
     }
+    
+    func openDetailScreen(for index: Int, isFavorite: Bool) {
+        let detailVacancyViewControllerCoordinator = DetailVacancyViewControllerCoordinator()
+        detailVacancyViewControllerCoordinator.navigationController = navigationController
+        detailVacancyViewControllerCoordinator.vacancy = vacancies[index]
+        detailVacancyViewControllerCoordinator.isFavorite = isFavorite
+        add(coordinator: detailVacancyViewControllerCoordinator)
+        detailVacancyViewControllerCoordinator.start()
+    }
 }

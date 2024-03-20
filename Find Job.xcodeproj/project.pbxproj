@@ -11,6 +11,9 @@
 		5A09F55E2BA470BB006671B6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F55D2BA470BB006671B6 /* APIManager.swift */; };
 		5A09F5602BA47107006671B6 /* VacanciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F55F2BA47107006671B6 /* VacanciesModel.swift */; };
 		5A09F5622BA47D3F006671B6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F5612BA47D3F006671B6 /* SearchViewModel.swift */; };
+		5A3FCE502BAB3040001A06BC /* DetailVacancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FCE4F2BAB3040001A06BC /* DetailVacancyViewController.swift */; };
+		5A3FCE522BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FCE512BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift */; };
+		5A3FCE542BAB306F001A06BC /* DetailVacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FCE532BAB306F001A06BC /* DetailVacancyViewModel.swift */; };
 		5A4B5E772BA9C4210053C730 /* TopCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E762BA9C4210053C730 /* TopCollectionView.swift */; };
 		5A4B5E792BA9C42E0053C730 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E782BA9C42E0053C730 /* TopCollectionViewCell.swift */; };
 		5A4B5E7B2BA9C4390053C730 /* TopCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E7A2BA9C4390053C730 /* TopCollectionViewCellModel.swift */; };
@@ -56,6 +59,9 @@
 		5A09F55D2BA470BB006671B6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5A09F55F2BA47107006671B6 /* VacanciesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesModel.swift; sourceTree = "<group>"; };
 		5A09F5612BA47D3F006671B6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		5A3FCE4F2BAB3040001A06BC /* DetailVacancyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVacancyViewController.swift; sourceTree = "<group>"; };
+		5A3FCE512BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVacancyViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		5A3FCE532BAB306F001A06BC /* DetailVacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVacancyViewModel.swift; sourceTree = "<group>"; };
 		5A4B5E762BA9C4210053C730 /* TopCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionView.swift; sourceTree = "<group>"; };
 		5A4B5E782BA9C42E0053C730 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A4B5E7A2BA9C4390053C730 /* TopCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCellModel.swift; sourceTree = "<group>"; };
@@ -116,6 +122,16 @@
 				5A09F55F2BA47107006671B6 /* VacanciesModel.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		5A3FCE4E2BAB2FF4001A06BC /* DetailVacancyModule */ = {
+			isa = PBXGroup;
+			children = (
+				5A3FCE4F2BAB3040001A06BC /* DetailVacancyViewController.swift */,
+				5A3FCE512BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift */,
+				5A3FCE532BAB306F001A06BC /* DetailVacancyViewModel.swift */,
+			);
+			path = DetailVacancyModule;
 			sourceTree = "<group>";
 		};
 		5A4B5E742BA9C3F60053C730 /* TopCollectionView */ = {
@@ -182,6 +198,7 @@
 				5A7C67E82BA21814003CC159 /* LoginOneModule */,
 				5A7C67ED2BA22C35003CC159 /* LoginTwoModule */,
 				5A7C67CB2BA1DA57003CC159 /* SearchModule */,
+				5A3FCE4E2BAB2FF4001A06BC /* DetailVacancyModule */,
 				5A7C67CC2BA1DA72003CC159 /* FavoritesModule */,
 				5A7C67CD2BA1DA9A003CC159 /* ResponsesModule */,
 				5A7C67CE2BA1DAB7003CC159 /* MessagesModule */,
@@ -387,6 +404,7 @@
 				5A7C67B42BA1C6D9003CC159 /* Find_Job.xcdatamodeld in Sources */,
 				5A7C67D12BA1DB3D003CC159 /* FavoritesViewController.swift in Sources */,
 				5A4B5E812BA9C49E0053C730 /* CollectionViewCellViewModel.swift in Sources */,
+				5A3FCE542BAB306F001A06BC /* DetailVacancyViewModel.swift in Sources */,
 				5A4B5E7F2BA9C4950053C730 /* CollectionViewCell.swift in Sources */,
 				5A4B5E7B2BA9C4390053C730 /* TopCollectionViewCellModel.swift in Sources */,
 				5A7C67E72BA208FE003CC159 /* CustomTabBarController.swift in Sources */,
@@ -407,6 +425,7 @@
 				5A62FE082BA23F6C00743E93 /* FavoritesViewModel.swift in Sources */,
 				5A62FE062BA2340700743E93 /* LoginTwoViewModel.swift in Sources */,
 				5A7C67EC2BA2186A003CC159 /* LoginOneViewControllerCoordinator.swift in Sources */,
+				5A3FCE522BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift in Sources */,
 				5A7C67D72BA1DB70003CC159 /* ProfileViewController.swift in Sources */,
 				5A7C67E42BA1E4E6003CC159 /* Extension.swift in Sources */,
 				5A7C67F12BA22FBB003CC159 /* LoginOneViewModel.swift in Sources */,
@@ -421,6 +440,7 @@
 				5A7C67C82BA1CFAB003CC159 /* AppCoordinator.swift in Sources */,
 				5A62FE0B2BA3094B00743E93 /* Constants.swift in Sources */,
 				5A09F55B2BA36844006671B6 /* CodeView.swift in Sources */,
+				5A3FCE502BAB3040001A06BC /* DetailVacancyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

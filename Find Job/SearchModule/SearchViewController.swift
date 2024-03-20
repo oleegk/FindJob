@@ -79,7 +79,7 @@ class SearchViewController: UIViewController {
         return button
     }()
     
-    private let cellCollectionView = CollectionView()
+    let cellCollectionView = CollectionView()
     
 
     override func viewDidLoad() {
@@ -87,29 +87,15 @@ class SearchViewController: UIViewController {
         setupView()
         setupConstraints()
         cellCollectionView.viewModel = viewModel
+        
     }
     
     
     func renameRespondButton() {
-        moreVacanciesButton.setTitle("\(numberOfVacancy(viewModel?.vacancies.count ?? 0))", for: .normal)
+        moreVacanciesButton.setTitle("\(viewModel?.numberOfVacancy() ?? "0")", for: .normal)
     }
-    
-    func numberOfVacancy(_ count: Int) -> String {
-        if count % 100 >= 11 && count % 100 <= 14 {
-            return "Ещё \(count) вакансий"
-        } else {
-            switch count % 10 {
-            case 1:
-                return "Ещё \(count) вакансия"
-            case 2, 3, 4:
-                return "Ещё \(count) вакансии"
-            default:
-                return "Ещё \(count) вакансий"
-            }
-        }
-    }
-    
-    func setupView() {
+
+    private func setupView() {
         view.backgroundColor = .black
         view.addSubview(searchTextField)
         view.addSubview(menuView)
@@ -118,7 +104,6 @@ class SearchViewController: UIViewController {
         view.addSubview(cellCollectionView)
         view.addSubview(moreVacanciesButton)
         renameRespondButton()
-
     }
     
     private func setupConstraints() {

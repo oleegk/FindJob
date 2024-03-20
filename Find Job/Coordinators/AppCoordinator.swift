@@ -28,7 +28,7 @@ class AppCoordinator: BaseCoordinator {
     }
     
     func getVacancy(completion: @escaping ([Vacancy]) -> ()) {
-        APIManager.shared.getVacancy { [weak self] vacancies in
+        APIManager.shared.getVacancy { vacancies in
             completion(vacancies)
             }
         }

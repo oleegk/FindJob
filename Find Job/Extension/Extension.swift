@@ -64,3 +64,19 @@ extension String {
         return ceil(boundingBox.height)
     }
 }
+
+private var associatedValues = [UIImageView: Bool]()
+
+extension UIImageView {
+    var isFavorite: Bool {
+        get {
+            return associatedValues[self] ?? false
+        }
+        set {
+            associatedValues[self] = newValue
+        }
+    }
+}
+
+
+

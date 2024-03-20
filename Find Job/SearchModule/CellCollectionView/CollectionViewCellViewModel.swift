@@ -8,7 +8,7 @@
 import UIKit
 
 class CollectionViewCellViewModel {
-    
+
     func formatPeopleCount(_ count: Int) -> String {
         if count % 100 >= 11 && count % 100 <= 14 {
             return "Сейчас просматривает \(count) человек"

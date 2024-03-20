@@ -18,6 +18,6 @@ class MessagesViewController: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .systemGray5
+        view.backgroundColor = .black
     }
 }

@@ -13,6 +13,8 @@ class CollectionViewCell: UICollectionViewCell {
     
     let viewModel = CollectionViewCellViewModel()
     
+    var cellTappedClosure: (() -> Void)?
+
     private let lookingNumber: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -72,7 +74,7 @@ class CollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private let heartImageView: UIImageView = {
+    var isFavoriteImageView: UIImageView = {
         let heartImageView = UIImageView()
         heartImageView.image = UIImage(named: "favorites")
         heartImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -113,6 +115,7 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         setupView()
         setupConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -133,7 +136,10 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func isFavoriteVacancy(_ value: Bool) {
-        if value { heartImageView.image = UIImage(named: "heart") }
+        if value {
+            isFavoriteImageView.image = UIImage(named: "heart")
+            isFavoriteImageView.isFavorite = true
+        }
     }
     
     func addLookingNumberInStackView(_ number: Int) {
@@ -200,27 +206,39 @@ class CollectionViewCell: UICollectionViewCell {
         stackView.addArrangedSubview(publicationDateLabel)
     }
     
-    @objc func imageViewTapped() {
-        if heartImageView.image == UIImage(named: "heart") {
-            heartImageView.image = UIImage(named: "favorites")
+    @objc func isFavoriteViewTapped() {
+        if isFavoriteImageView.image == UIImage(named: "heart") {
+            isFavoriteImageView.image = UIImage(named: "favorites")
+            isFavoriteImageView.isFavorite = false
         } else {
-            heartImageView.image = UIImage(named: "heart")
+            isFavoriteImageView.isFavorite = true
+            isFavoriteImageView.image = UIImage(named: "heart")
         }
     }
     
     func addGestureOnHeart() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
-        heartImageView.isUserInteractionEnabled = true
-        heartImageView.addGestureRecognizer(tapGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(isFavoriteViewTapped))
+        isFavoriteImageView.isUserInteractionEnabled = true
+        isFavoriteImageView.addGestureRecognizer(tapGesture)
     }
     
+    func addGestureOnCell() -> UITapGestureRecognizer {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        return tapGesture
+    }
+    
+    @objc func cellTapped() {
+        cellTappedClosure?()
+    }
+
     func setupView() {
         contentView.backgroundColor = Constants.Color.grey1
         contentView.layer.cornerRadius = 8
         
         contentView.addSubview(stackView)
         contentView.addSubview(respondButton)
-        contentView.addSubview(heartImageView)
+        contentView.addSubview(isFavoriteImageView)
+        contentView.addGestureRecognizer(addGestureOnCell())
         addGestureOnHeart()
     }
     
@@ -236,10 +254,10 @@ class CollectionViewCell: UICollectionViewCell {
             respondButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
             respondButton.widthAnchor.constraint(equalToConstant: contentView.frame.size.width - 32),
 
-            heartImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            heartImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            heartImageView.heightAnchor.constraint(equalToConstant: 24),
-            heartImageView.widthAnchor.constraint(equalToConstant: 24)
+            isFavoriteImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            isFavoriteImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            isFavoriteImageView.heightAnchor.constraint(equalToConstant: 24),
+            isFavoriteImageView.widthAnchor.constraint(equalToConstant: 24)
         ])
     }
 }
