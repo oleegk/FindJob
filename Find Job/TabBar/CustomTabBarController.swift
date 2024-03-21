@@ -11,18 +11,30 @@ class CustomTabBarController: UITabBarController {
     
     var viewModel: LoginTwoViewModel?
     var registrationCompleted = false
+    var badgeCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
         tabBar.barStyle = .black
+        tabBar.items?[1].setBadgeTextAttributes([.foregroundColor: UIColor.white, .backgroundColor: UIColor.red], for: .normal)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         selectedIndex = 1
+    }
+    
+    
+    func installBadgeValue() {
+        if badgeCount > 0 {
+            tabBar.items?[1].badgeValue = "\(badgeCount)"
+        } else {
+            tabBar.items?[1].badgeValue = nil
+        }
         
     }
 }

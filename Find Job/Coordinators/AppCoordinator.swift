@@ -30,6 +30,6 @@ class AppCoordinator: BaseCoordinator {
     func getVacancy(completion: @escaping ([Vacancy]) -> ()) {
         APIManager.shared.getVacancy { vacancies in
             completion(vacancies)
-            }
         }
     }
+}

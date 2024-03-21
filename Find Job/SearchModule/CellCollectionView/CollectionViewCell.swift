@@ -11,9 +11,12 @@ class CollectionViewCell: UICollectionViewCell {
     
     var vacancies: [Vacancy] = []
     
+    
     let viewModel = CollectionViewCellViewModel()
     
     var cellTappedClosure: (() -> Void)?
+    
+    var isFavoriteTappedClosure: ((Bool) -> Void)?
 
     private let lookingNumber: UILabel = {
         let label = UILabel()
@@ -115,7 +118,6 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         setupView()
         setupConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -206,29 +208,39 @@ class CollectionViewCell: UICollectionViewCell {
         stackView.addArrangedSubview(publicationDateLabel)
     }
     
-    @objc func isFavoriteViewTapped() {
-        if isFavoriteImageView.image == UIImage(named: "heart") {
-            isFavoriteImageView.image = UIImage(named: "favorites")
-            isFavoriteImageView.isFavorite = false
-        } else {
-            isFavoriteImageView.isFavorite = true
-            isFavoriteImageView.image = UIImage(named: "heart")
-        }
-    }
-    
     func addGestureOnHeart() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(isFavoriteViewTapped))
         isFavoriteImageView.isUserInteractionEnabled = true
         isFavoriteImageView.addGestureRecognizer(tapGesture)
     }
     
+    @objc func isFavoriteViewTapped() {
+        if isFavoriteImageView.image == UIImage(named: "heart") {
+            isFavoriteImageView.image = UIImage(named: "favorites")
+            isFavoriteImageView.isFavorite = false
+            if let isFavoriteTappedClosure = isFavoriteTappedClosure {
+                isFavoriteTappedClosure(false)
+            }
+        } else {
+            isFavoriteImageView.isFavorite = true
+            isFavoriteImageView.image = UIImage(named: "heart")
+            if let isFavoriteTappedClosure = isFavoriteTappedClosure {
+                isFavoriteTappedClosure(true)
+            }
+        }
+    }
+    
     func addGestureOnCell() -> UITapGestureRecognizer {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        tapGesture.cancelsTouchesInView = false
         return tapGesture
     }
     
-    @objc func cellTapped() {
-        cellTappedClosure?()
+    @objc func cellTapped(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: contentView)
+        if !respondButton.frame.contains(location) {
+            cellTappedClosure?()
+        }
     }
 
     func setupView() {

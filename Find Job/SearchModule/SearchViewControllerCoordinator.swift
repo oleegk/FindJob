@@ -9,6 +9,8 @@ import UIKit
 
 class SearchViewControllerCoordinator: BaseCoordinator {
     
+    weak var parentCoordinator: TabBarCoordinator?
+    
     var vacancies: [Vacancy]
     
     init(vacancies: [Vacancy]) {

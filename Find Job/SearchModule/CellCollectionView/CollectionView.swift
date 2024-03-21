@@ -42,8 +42,20 @@ extension CollectionView: UICollectionViewDataSource, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
         cell.cellTappedClosure = { [weak self] in
-            
             self?.viewModel?.openDetailScreen(for: indexPath.row, isFavorites: cell.isFavoriteImageView.isFavorite)
+        }
+        
+        cell.isFavoriteTappedClosure = { [weak self] isFavorite in
+            if isFavorite {
+                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.badgeCount += 1
+                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.installBadgeValue()
+                self?.viewModel?.vacancies[indexPath.row].isFavorite = true
+            } else {
+                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.badgeCount -= 1
+                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.installBadgeValue()
+                self?.viewModel?.vacancies[indexPath.row].isFavorite = false
+            }
+            
         }
 
         if let vacancies = viewModel?.vacancies {

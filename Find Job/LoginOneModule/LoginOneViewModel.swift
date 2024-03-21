@@ -18,6 +18,19 @@ class LoginOneViewModel {
     func didTapButton(_ email: String) {
         coordinator?.openLoginTwoScreen(email)
     }
+    
+    
+    func updateBudge() {
+        if let vacancies = coordinator?.parentCoordinator?.vacancies {
+            for vacancy in vacancies {
+                if let isFavorite = vacancy.isFavorite {
+                    if isFavorite {
+                        coordinator?.parentCoordinator?.tabBarController.badgeCount += 1
+                    }
+                }
+            }
+        }
+    }
 }
 
 

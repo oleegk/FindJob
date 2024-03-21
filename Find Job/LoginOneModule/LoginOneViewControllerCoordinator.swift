@@ -17,7 +17,7 @@ class LoginOneViewControllerCoordinator: BaseCoordinator {
         let loginOneViewController = LoginOneViewController()
         loginOneViewController.viewModel = loginOneViewModel
         loginOneViewModel.coordinator = self
-        
+        loginOneViewModel.updateBudge()
         navigationController.viewControllers = [loginOneViewController]
     }
     

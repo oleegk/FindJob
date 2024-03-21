@@ -26,6 +26,7 @@ class TabBarCoordinator: BaseCoordinator {
         let profileViewControllerCoordinator = ProfileViewControllerCoordinator()
         
         loginOneViewControllerCoordinator.parentCoordinator = self
+        searchViewControllerCoordinator.parentCoordinator = self
         
         
         add(coordinator: searchViewControllerCoordinator)
@@ -53,6 +54,7 @@ class TabBarCoordinator: BaseCoordinator {
             messagesViewControllerCoordinator.navigationController,
             profileViewControllerCoordinator.navigationController
         ]
+        tabBarController.installBadgeValue()
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {
