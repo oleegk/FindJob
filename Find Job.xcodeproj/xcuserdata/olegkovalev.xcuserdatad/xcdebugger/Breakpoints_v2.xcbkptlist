@@ -3,4 +3,118 @@
    uuid = "9EEA97E1-568F-4B97-879B-7F6E2D5DB23F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B409812-E9F1-4E0A-81B1-84F3F1D0F6D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Find Job/SearchModule/CellCollectionView/CollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "isFavoriteViewTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FE16709-9B57-4699-86B0-A5BF86839470"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Find Job/SearchModule/CellCollectionView/CollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "isFavoriteViewTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6FE16709-9B57-4699-86B0-A5BF86839470 - 73545688844c7544"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Find_Job.CollectionViewCell.isFavoriteViewTapped() -&gt; ()"
+                  moduleName = "Find Job"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olegkovalev/Documents/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/iOS/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BA%D0%BE%D0%B4%D0%B0/%D0%A0%D0%90%D0%97%D0%9D%D0%AB%D0%95%20%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2%D0%AB/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B4%D0%BB%D1%8F%20Effective%20Mobile/Find%20Job/Find%20Job/SearchModule/CellCollectionView/CollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "608">
+               </Location>
+               <Location
+                  uuid = "6FE16709-9B57-4699-86B0-A5BF86839470 - 73545688844c7544"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Find_Job.CollectionViewCell.isFavoriteViewTapped() -&gt; ()"
+                  moduleName = "Find Job"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olegkovalev/Documents/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/iOS/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BA%D0%BE%D0%B4%D0%B0/%D0%A0%D0%90%D0%97%D0%9D%D0%AB%D0%95%20%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2%D0%AB/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B4%D0%BB%D1%8F%20Effective%20Mobile/Find%20Job/Find%20Job/SearchModule/CellCollectionView/CollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58232BC5-EE0A-4D00-8E30-AA08423635CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Find Job/SearchModule/CellCollectionView/CollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58232BC5-EE0A-4D00-8E30-AA08423635CD - d7c467a82fc69795"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Find_Job.CollectionView.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Find Job"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olegkovalev/Documents/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/iOS/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BA%D0%BE%D0%B4%D0%B0/%D0%A0%D0%90%D0%97%D0%9D%D0%AB%D0%95%20%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2%D0%AB/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B4%D0%BB%D1%8F%20Effective%20Mobile/Find%20Job/Find%20Job/SearchModule/CellCollectionView/CollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+               <Location
+                  uuid = "58232BC5-EE0A-4D00-8E30-AA08423635CD - 1aeb3d3f9895949a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Find_Job.CollectionView.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Find Job"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olegkovalev/Documents/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/iOS/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B_%D0%BA%D0%BE%D0%B4%D0%B0/%D0%A0%D0%90%D0%97%D0%9D%D0%AB%D0%95%20%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2%D0%AB/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B4%D0%BB%D1%8F%20Effective%20Mobile/Find%20Job/Find%20Job/SearchModule/CellCollectionView/CollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

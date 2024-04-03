@@ -17,19 +17,9 @@ class AppCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        getVacancy() { [weak self] vacancies in
-            DispatchQueue.main.async {
-                let tabBarCoordinator = TabBarCoordinator(vacancies: vacancies)
-                tabBarCoordinator.start()
-                self?.add(coordinator: tabBarCoordinator)
-                self?.window.rootViewController = tabBarCoordinator.tabBarController
-            }
-        }
-    }
-    
-    func getVacancy(completion: @escaping ([Vacancy]) -> ()) {
-        APIManager.shared.getVacancy { vacancies in
-            completion(vacancies)
-        }
+        let tabBarCoordinator = TabBarCoordinator()
+        tabBarCoordinator.start()
+        self.add(coordinator: tabBarCoordinator)
+        self.window.rootViewController = tabBarCoordinator.tabBarController
     }
 }

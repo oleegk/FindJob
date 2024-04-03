@@ -9,16 +9,29 @@ import UIKit
 
 class DetailVacancyViewControllerCoordinator: BaseCoordinator {
     
+    weak var parentCoordinator: SearchViewControllerCoordinator?
+    weak var tabBarCoordinator: TabBarCoordinator?
+    weak var vacanciesModels: VacanciesModels?
     var navigationController: UINavigationController?
-    
     var vacancy: Vacancy?
-    var isFavorite: Bool?
 
     override func start() {
-        let detailVacancyViewModel = DetailVacancyViewModel()
-        let detailVacancyViewController = DetailVacancyViewController()
-        detailVacancyViewController.viewModel = detailVacancyViewModel
-        detailVacancyViewModel.coordinator = self
-        navigationController?.pushViewController(detailVacancyViewController, animated: true)
+        if let vacancy = vacancy {
+            let detailVacancyViewModel = DetailVacancyViewModel()
+            detailVacancyViewModel.vacancy = vacancy
+            detailVacancyViewModel.vacanciesModels = vacanciesModels
+            
+            let detailVacancyViewController = DetailVacancyViewController()
+            detailVacancyViewController.viewModel = detailVacancyViewModel
+            detailVacancyViewController.configure()
+            detailVacancyViewModel.coordinator = self
+            parentCoordinator?.viewModel.detailVacancyViewModel = detailVacancyViewModel
+            
+            navigationController?.pushViewController(detailVacancyViewController, animated: true)
+        }
+    }
+
+    func backButtonTapped() {
+        navigationController?.popViewController(animated: true)
     }
 }

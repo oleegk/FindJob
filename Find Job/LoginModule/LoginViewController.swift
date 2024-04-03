@@ -8,9 +8,9 @@
 import UIKit
 
 
-class LoginOneViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    var viewModel: LoginOneViewModel?
+    weak var viewModel: LoginViewModel?
     
     private lazy var topLabel: UILabel = {
         var label = UILabel()
@@ -274,7 +274,7 @@ class LoginOneViewController: UIViewController {
 }
 
 
-extension LoginOneViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

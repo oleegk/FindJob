@@ -7,16 +7,37 @@
 
 import UIKit
 
+
 class FavoritesViewControllerCoordinator: BaseCoordinator {
+
+    var navigationController = UINavigationController()
+    var viewModel: CollectionViewModelProtocol = FavoritesViewModel()
+    var tabBarCoordinator: TabBarCoordinator?
+    weak var vacanciesModels: VacanciesModels?
     
-    var navigationController: UINavigationController?
-    var favoritesViewModel = FavoritesViewModel()
 
     override func start() {
         let favoritesViewController = FavoritesViewController()
-        favoritesViewModel.coordinator = self        
-        favoritesViewController.viewModel = favoritesViewModel
+        viewModel.vacanciesModels = vacanciesModels
+        favoritesViewController.viewModel = viewModel
+        favoritesViewController.cellCollectionView.viewModel = viewModel
+        viewModel.coordinator = self
+        navigationController.pushViewController(favoritesViewController, animated: true)
+    }
+    
+    func openDetailScreen(for vacancy: Vacancy) {
+        let detailVacancyViewControllerCoordinator = DetailVacancyViewControllerCoordinator()
+        detailVacancyViewControllerCoordinator.navigationController = navigationController
+        detailVacancyViewControllerCoordinator.vacancy = vacancy
+        detailVacancyViewControllerCoordinator.vacanciesModels = vacanciesModels
 
-        navigationController?.pushViewController(favoritesViewController, animated: true)
+
+        add(coordinator: detailVacancyViewControllerCoordinator)
+        detailVacancyViewControllerCoordinator.tabBarCoordinator = tabBarCoordinator
+        detailVacancyViewControllerCoordinator.start()
     }
 }
+
+
+extension FavoritesViewControllerCoordinator: CollectionViewCoordinatorProtocol {}
+

@@ -9,7 +9,7 @@ import UIKit
 
 class CustomTabBarController: UITabBarController {
     
-    var viewModel: LoginTwoViewModel?
+    var viewModel: CodeViewModel?
     var registrationCompleted = false
     var badgeCount = 0
     
@@ -35,7 +35,6 @@ class CustomTabBarController: UITabBarController {
         } else {
             tabBar.items?[1].badgeValue = nil
         }
-        
     }
 }
 

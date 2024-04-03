@@ -9,15 +9,12 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    var vacancies: [Vacancy] = []
-    
-    
     let viewModel = CollectionViewCellViewModel()
     
     var cellTappedClosure: (() -> Void)?
     
     var isFavoriteTappedClosure: ((Bool) -> Void)?
-
+    
     private let lookingNumber: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -141,11 +138,15 @@ class CollectionViewCell: UICollectionViewCell {
         if value {
             isFavoriteImageView.image = UIImage(named: "heart")
             isFavoriteImageView.isFavorite = true
+            
+        } else {
+            isFavoriteImageView.image = UIImage(named: "favorites")
+            isFavoriteImageView.isFavorite = false
         }
     }
     
     func addLookingNumberInStackView(_ number: Int) {
-        lookingNumber.text = viewModel.formatPeopleCount(number)
+        lookingNumber.text = formatPeopleCount(number)
         stackView.addArrangedSubview(lookingNumber)
     }
     
@@ -273,4 +274,5 @@ class CollectionViewCell: UICollectionViewCell {
         ])
     }
 }
+
 

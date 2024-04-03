@@ -1,5 +1,5 @@
 //
-//  LoginTwoViewController.swift
+//  CodeViewController.swift
 //  Find Job
 //
 //  Created by Олег Ковалев on 13.03.2024.
@@ -8,9 +8,9 @@
 import UIKit
 
 
-class LoginTwoViewController: UIViewController {
+class CodeViewController: UIViewController {
     
-    var viewModel: LoginTwoViewModel?
+    weak var viewModel: CodeViewModel?
     
     private lazy var loginView: UIView = {
         var view = UIView()

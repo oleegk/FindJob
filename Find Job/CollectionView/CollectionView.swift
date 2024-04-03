@@ -9,8 +9,8 @@ import UIKit
 
 class CollectionView: UICollectionView {
     
-    weak var viewModel: SearchViewModel?
-
+    var viewModel: CollectionViewModelProtocol?
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -24,6 +24,7 @@ class CollectionView: UICollectionView {
         self.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         self.dataSource = self
         self.delegate = self
+        self.backgroundColor = .black
     }
     
     required init?(coder: NSCoder) {
@@ -35,32 +36,32 @@ class CollectionView: UICollectionView {
 extension CollectionView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return viewModel?.vacanciesModels?.vacancies.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
         cell.cellTappedClosure = { [weak self] in
-            self?.viewModel?.openDetailScreen(for: indexPath.row, isFavorites: cell.isFavoriteImageView.isFavorite)
+            guard let self else { return }
+            if let tappedVacancyID = viewModel?.vacanciesModels?.vacancies[indexPath.row].id {
+                self.viewModel?.openDetailScreen(for: tappedVacancyID)
+            }
         }
         
+        
+        
         cell.isFavoriteTappedClosure = { [weak self] isFavorite in
-            if isFavorite {
-                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.badgeCount += 1
-                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.installBadgeValue()
-                self?.viewModel?.vacancies[indexPath.row].isFavorite = true
-            } else {
-                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.badgeCount -= 1
-                self?.viewModel?.coordinator?.parentCoordinator?.tabBarController.installBadgeValue()
-                self?.viewModel?.vacancies[indexPath.row].isFavorite = false
+            self?.viewModel?.isFavoriteTapped(isFavorite, index: indexPath.row)
+            if let tappedVacancyID = self?.viewModel?.vacanciesModels?.vacancies[indexPath.row].id {
+                self?.viewModel?.saveChangesInDataBase(id: tappedVacancyID, isFavorite: isFavorite)
             }
-            
         }
-
-        if let vacancies = viewModel?.vacancies {
-            cell.configure(vacancies[indexPath.row])
+        
+        if let updateVacancy = viewModel?.returnUpdateIsFavoritePropertyVacancies() {
+            cell.configure(updateVacancy[indexPath.row])
         }
+        
         return cell
     }
     

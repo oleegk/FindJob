@@ -9,53 +9,51 @@ import UIKit
 
 class TabBarCoordinator: BaseCoordinator {
     
-    var vacancies: [Vacancy]
+    let tabBarController = CustomTabBarController()
+    let vacanciesModels = VacanciesModels()
     
-    init(vacancies: [Vacancy]) {
-        self.vacancies = vacancies
-    }
-    
-    var tabBarController = CustomTabBarController()
-    
-    override func start() {
-
-        let searchViewControllerCoordinator = SearchViewControllerCoordinator(vacancies: vacancies)
-        let loginOneViewControllerCoordinator = LoginOneViewControllerCoordinator()
+    override func start() {        
+        let searchViewControllerCoordinator = SearchViewControllerCoordinator()
+        let loginViewControllerCoordinator = LoginViewControllerCoordinator()
         let responsesViewControllerCoordinator = ResponsesViewControllerCoordinator()
         let messagesViewControllerCoordinator = MessagesViewControllerCoordinator()
         let profileViewControllerCoordinator = ProfileViewControllerCoordinator()
         
-        loginOneViewControllerCoordinator.parentCoordinator = self
-        searchViewControllerCoordinator.parentCoordinator = self
+        loginViewControllerCoordinator.tabBarCoordinator = self
+        searchViewControllerCoordinator.tabBarCoordinator = self
+        searchViewControllerCoordinator.vacanciesModels = vacanciesModels
+        loginViewControllerCoordinator.vacanciesModels = vacanciesModels
+        
         
         
         add(coordinator: searchViewControllerCoordinator)
-        add(coordinator: loginOneViewControllerCoordinator)
+        add(coordinator: loginViewControllerCoordinator)
         add(coordinator: responsesViewControllerCoordinator)
         add(coordinator: messagesViewControllerCoordinator)
         add(coordinator: profileViewControllerCoordinator)
         
         searchViewControllerCoordinator.navigationController.tabBarItem = addTabBarItem(image: UIImage(named: "search"), title: "Поиск", tag: 0)
-        loginOneViewControllerCoordinator.navigationController.tabBarItem = addTabBarItem(image: UIImage(named: "favorites"), title: "Избранные", tag: 1)
+        loginViewControllerCoordinator.navigationController.tabBarItem = addTabBarItem(image: UIImage(named: "favorites"), title: "Избранные", tag: 1)
         responsesViewControllerCoordinator.navigationController.tabBarItem = addTabBarItem(image: UIImage(named: "responses"), title: "Отклики", tag: 2)
         messagesViewControllerCoordinator.navigationController.tabBarItem = addTabBarItem(image: UIImage(named: "messages"), title: "Сообщения", tag: 3)
         profileViewControllerCoordinator.navigationController.tabBarItem = addTabBarItem(image: UIImage(named: "profile"), title: "Профиль", tag: 4)
 
         searchViewControllerCoordinator.start()
-        loginOneViewControllerCoordinator.start()
+        loginViewControllerCoordinator.start()
         responsesViewControllerCoordinator.start()
         messagesViewControllerCoordinator.start()
         profileViewControllerCoordinator.start()
         
         tabBarController.viewControllers = [
             searchViewControllerCoordinator.navigationController,
-            loginOneViewControllerCoordinator.navigationController,
+            loginViewControllerCoordinator.navigationController,
             responsesViewControllerCoordinator.navigationController,
             messagesViewControllerCoordinator.navigationController,
             profileViewControllerCoordinator.navigationController
         ]
-        tabBarController.installBadgeValue()
     }
+    
+
     
     func childDidFinish(_ childCoordinator: Coordinator) {
         for (index, coordinator) in childCoordinators.enumerated() {

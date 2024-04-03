@@ -7,33 +7,45 @@
 
 import UIKit
 
+
+
+
 class SearchViewControllerCoordinator: BaseCoordinator {
     
-    weak var parentCoordinator: TabBarCoordinator?
-    
-    var vacancies: [Vacancy]
-    
-    init(vacancies: [Vacancy]) {
-        self.vacancies = vacancies
-    }
-    
+    weak var tabBarCoordinator: TabBarCoordinator?
+    weak var vacanciesModels: VacanciesModels?
+    var viewModel: CollectionViewModelProtocol = SearchViewModel()
     var navigationController = UINavigationController()
     
     override func start() {
-        let searchViewModel = SearchViewModel(vacancies: vacancies)
         let searchViewController = SearchViewController()
-        searchViewController.viewModel = searchViewModel
-        searchViewModel.coordinator = self
-        navigationController.setViewControllers([searchViewController], animated: true)
+        searchViewController.viewModel = viewModel
+        searchViewController.cellCollectionView.viewModel = viewModel
+        searchViewController.cellCollectionView.reloadData()
         
+        viewModel.coordinator = self
+        viewModel.vacanciesModels = vacanciesModels
+        
+        self.viewModel.vacanciesModels?.getVacancies {
+            self.viewModel.updateBudge()
+        }
+        
+        navigationController.setViewControllers([searchViewController], animated: true)
     }
     
-    func openDetailScreen(for index: Int, isFavorite: Bool) {
+    func openDetailScreen(for vacancy: Vacancy) {
         let detailVacancyViewControllerCoordinator = DetailVacancyViewControllerCoordinator()
         detailVacancyViewControllerCoordinator.navigationController = navigationController
-        detailVacancyViewControllerCoordinator.vacancy = vacancies[index]
-        detailVacancyViewControllerCoordinator.isFavorite = isFavorite
+        detailVacancyViewControllerCoordinator.vacancy = vacancy
+        detailVacancyViewControllerCoordinator.vacanciesModels = vacanciesModels
+        
+        detailVacancyViewControllerCoordinator.parentCoordinator = self
+        detailVacancyViewControllerCoordinator.tabBarCoordinator = tabBarCoordinator
+        
         add(coordinator: detailVacancyViewControllerCoordinator)
         detailVacancyViewControllerCoordinator.start()
     }
 }
+
+
+extension SearchViewControllerCoordinator: CollectionViewCoordinatorProtocol {}

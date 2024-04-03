@@ -8,24 +8,24 @@
 import UIKit
 
 
-class LoginTwoViewModel {
-    var email = ""
-    
-    var registrationCompleted = false
-    weak var coordinator: LoginTwoViewControllerCoordinator?
+class CodeViewModel {
+    weak var coordinator: CodeViewControllerCoordinator?
     weak var tabBarController: CustomTabBarController?
     
+    var email = ""
+    var registrationCompleted = false
+
     
     func didTapButton() {
         tabBarController?.registrationCompleted = true
         tabBarController?.selectedIndex = 0
-        coordinator?.openSearchScreen()
+        coordinator?.openFavoritesScreen()
     }
     func deleteOneVC() {
-        if let viewControllers = coordinator?.navigationController?.viewControllers {
+        if let viewControllers = coordinator?.navigationController.viewControllers {
             for viewController in viewControllers {
-                if viewController is LoginOneViewController {
-                    coordinator?.navigationController?.viewControllers.removeAll { $0 == viewController }
+                if viewController is LoginViewController {
+                    coordinator?.navigationController.viewControllers.removeAll { $0 == viewController }
                     break
                 }
             }

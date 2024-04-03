@@ -14,6 +14,8 @@
 		5A3FCE502BAB3040001A06BC /* DetailVacancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FCE4F2BAB3040001A06BC /* DetailVacancyViewController.swift */; };
 		5A3FCE522BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FCE512BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift */; };
 		5A3FCE542BAB306F001A06BC /* DetailVacancyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FCE532BAB306F001A06BC /* DetailVacancyViewModel.swift */; };
+		5A45FEC22BB40C4900CB3998 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45FEC12BB40C4900CB3998 /* QuestionView.swift */; };
+		5A45FEC42BB4709A00CB3998 /* VacanciesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45FEC32BB4709A00CB3998 /* VacanciesModels.swift */; };
 		5A4B5E772BA9C4210053C730 /* TopCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E762BA9C4210053C730 /* TopCollectionView.swift */; };
 		5A4B5E792BA9C42E0053C730 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E782BA9C42E0053C730 /* TopCollectionViewCell.swift */; };
 		5A4B5E7B2BA9C4390053C730 /* TopCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B5E7A2BA9C4390053C730 /* TopCollectionViewCellModel.swift */; };
@@ -23,9 +25,9 @@
 		5A4B5E992BAABECB0053C730 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E872BAABECB0053C730 /* SF-Pro-Display-Regular.otf */; };
 		5A4B5E9B2BAABECB0053C730 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E892BAABECB0053C730 /* SF-Pro-Display-Medium.otf */; };
 		5A4B5E9D2BAABECB0053C730 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B5E8B2BAABECB0053C730 /* SF-Pro-Display-Semibold.otf */; };
-		5A62FE022BA233E000743E93 /* LoginTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE012BA233E000743E93 /* LoginTwoViewController.swift */; };
-		5A62FE042BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE032BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift */; };
-		5A62FE062BA2340700743E93 /* LoginTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE052BA2340700743E93 /* LoginTwoViewModel.swift */; };
+		5A62FE022BA233E000743E93 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE012BA233E000743E93 /* CodeViewController.swift */; };
+		5A62FE042BA233F500743E93 /* CodeViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE032BA233F500743E93 /* CodeViewControllerCoordinator.swift */; };
+		5A62FE062BA2340700743E93 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE052BA2340700743E93 /* CodeViewModel.swift */; };
 		5A62FE082BA23F6C00743E93 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE072BA23F6C00743E93 /* FavoritesViewModel.swift */; };
 		5A62FE0B2BA3094B00743E93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62FE0A2BA3094B00743E93 /* Constants.swift */; };
 		5A7C67AA2BA1C6D9003CC159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67A92BA1C6D9003CC159 /* AppDelegate.swift */; };
@@ -49,9 +51,12 @@
 		5A7C67E12BA1DCE5003CC159 /* ProfileViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67E02BA1DCE5003CC159 /* ProfileViewControllerCoordinator.swift */; };
 		5A7C67E42BA1E4E6003CC159 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67E32BA1E4E6003CC159 /* Extension.swift */; };
 		5A7C67E72BA208FE003CC159 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67E62BA208FE003CC159 /* CustomTabBarController.swift */; };
-		5A7C67EA2BA21852003CC159 /* LoginOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67E92BA21852003CC159 /* LoginOneViewController.swift */; };
-		5A7C67EC2BA2186A003CC159 /* LoginOneViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67EB2BA2186A003CC159 /* LoginOneViewControllerCoordinator.swift */; };
-		5A7C67F12BA22FBB003CC159 /* LoginOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67F02BA22FBB003CC159 /* LoginOneViewModel.swift */; };
+		5A7C67EA2BA21852003CC159 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67E92BA21852003CC159 /* LoginViewController.swift */; };
+		5A7C67EC2BA2186A003CC159 /* LoginViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67EB2BA2186A003CC159 /* LoginViewControllerCoordinator.swift */; };
+		5A7C67F12BA22FBB003CC159 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C67F02BA22FBB003CC159 /* LoginViewModel.swift */; };
+		5AB7BB722BB7078600101D35 /* FavoriteCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7BB712BB7078600101D35 /* FavoriteCollectionView.swift */; };
+		5AC0EBE32BB82E940076D4BC /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0EBE22BB82E940076D4BC /* CollectionViewModelProtocol.swift */; };
+		5AC0EBE52BB83EA70076D4BC /* CollectionViewCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0EBE42BB83EA70076D4BC /* CollectionViewCoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,8 @@
 		5A3FCE4F2BAB3040001A06BC /* DetailVacancyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVacancyViewController.swift; sourceTree = "<group>"; };
 		5A3FCE512BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVacancyViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		5A3FCE532BAB306F001A06BC /* DetailVacancyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVacancyViewModel.swift; sourceTree = "<group>"; };
+		5A45FEC12BB40C4900CB3998 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		5A45FEC32BB4709A00CB3998 /* VacanciesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesModels.swift; sourceTree = "<group>"; };
 		5A4B5E762BA9C4210053C730 /* TopCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionView.swift; sourceTree = "<group>"; };
 		5A4B5E782BA9C42E0053C730 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A4B5E7A2BA9C4390053C730 /* TopCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCellModel.swift; sourceTree = "<group>"; };
@@ -71,9 +78,9 @@
 		5A4B5E872BAABECB0053C730 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		5A4B5E892BAABECB0053C730 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		5A4B5E8B2BAABECB0053C730 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
-		5A62FE012BA233E000743E93 /* LoginTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoViewController.swift; sourceTree = "<group>"; };
-		5A62FE032BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoViewControllerCoordinator.swift; sourceTree = "<group>"; };
-		5A62FE052BA2340700743E93 /* LoginTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoViewModel.swift; sourceTree = "<group>"; };
+		5A62FE012BA233E000743E93 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		5A62FE032BA233F500743E93 /* CodeViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		5A62FE052BA2340700743E93 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		5A62FE072BA23F6C00743E93 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		5A62FE0A2BA3094B00743E93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A7C67A62BA1C6D9003CC159 /* Find Job.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Job.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +106,12 @@
 		5A7C67E02BA1DCE5003CC159 /* ProfileViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		5A7C67E32BA1E4E6003CC159 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5A7C67E62BA208FE003CC159 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		5A7C67E92BA21852003CC159 /* LoginOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOneViewController.swift; sourceTree = "<group>"; };
-		5A7C67EB2BA2186A003CC159 /* LoginOneViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOneViewControllerCoordinator.swift; sourceTree = "<group>"; };
-		5A7C67F02BA22FBB003CC159 /* LoginOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOneViewModel.swift; sourceTree = "<group>"; };
+		5A7C67E92BA21852003CC159 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A7C67EB2BA2186A003CC159 /* LoginViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		5A7C67F02BA22FBB003CC159 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5AB7BB712BB7078600101D35 /* FavoriteCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionView.swift; sourceTree = "<group>"; };
+		5AC0EBE22BB82E940076D4BC /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
+		5AC0EBE42BB83EA70076D4BC /* CollectionViewCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5A09F55D2BA470BB006671B6 /* APIManager.swift */,
+				5A45FEC32BB4709A00CB3998 /* VacanciesModels.swift */,
 				5A09F55F2BA47107006671B6 /* VacanciesModel.swift */,
 			);
 			path = API;
@@ -130,6 +141,7 @@
 				5A3FCE4F2BAB3040001A06BC /* DetailVacancyViewController.swift */,
 				5A3FCE512BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift */,
 				5A3FCE532BAB306F001A06BC /* DetailVacancyViewModel.swift */,
+				5A45FEC12BB40C4900CB3998 /* QuestionView.swift */,
 			);
 			path = DetailVacancyModule;
 			sourceTree = "<group>";
@@ -144,14 +156,17 @@
 			path = TopCollectionView;
 			sourceTree = "<group>";
 		};
-		5A4B5E752BA9C4070053C730 /* CellCollectionView */ = {
+		5A4B5E752BA9C4070053C730 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				5A4B5E7C2BA9C48C0053C730 /* CollectionView.swift */,
 				5A4B5E7E2BA9C4950053C730 /* CollectionViewCell.swift */,
 				5A4B5E802BA9C49E0053C730 /* CollectionViewCellViewModel.swift */,
+				5AB7BB712BB7078600101D35 /* FavoriteCollectionView.swift */,
+				5AC0EBE22BB82E940076D4BC /* CollectionViewModelProtocol.swift */,
+				5AC0EBE42BB83EA70076D4BC /* CollectionViewCoordinatorProtocol.swift */,
 			);
-			path = CellCollectionView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		5A4B5E822BAABECB0053C730 /* Шрифты San Francisco Pro Display */ = {
@@ -191,18 +206,20 @@
 		5A7C67A82BA1C6D9003CC159 /* Find Job */ = {
 			isa = PBXGroup;
 			children = (
-				5A09F55C2BA47098006671B6 /* API */,
 				5A7C67C02BA1CDE9003CC159 /* Application */,
 				5A7C67C22BA1CE1E003CC159 /* Coordinators */,
-				5A7C67E52BA208E1003CC159 /* TabBar */,
-				5A7C67E82BA21814003CC159 /* LoginOneModule */,
-				5A7C67ED2BA22C35003CC159 /* LoginTwoModule */,
+				5A7C67E82BA21814003CC159 /* LoginModule */,
+				5A7C67ED2BA22C35003CC159 /* CodeModule */,
 				5A7C67CB2BA1DA57003CC159 /* SearchModule */,
 				5A3FCE4E2BAB2FF4001A06BC /* DetailVacancyModule */,
 				5A7C67CC2BA1DA72003CC159 /* FavoritesModule */,
 				5A7C67CD2BA1DA9A003CC159 /* ResponsesModule */,
 				5A7C67CE2BA1DAB7003CC159 /* MessagesModule */,
 				5A7C67CF2BA1DAD3003CC159 /* ProfileModule */,
+				5A7C67E52BA208E1003CC159 /* TabBar */,
+				5A4B5E742BA9C3F60053C730 /* TopCollectionView */,
+				5A4B5E752BA9C4070053C730 /* CollectionView */,
+				5A09F55C2BA47098006671B6 /* API */,
 				5A7C67C12BA1CE04003CC159 /* SupportingFiles */,
 				5A7C67E22BA1E4C4003CC159 /* Extension */,
 				5A62FE092BA3093700743E93 /* Constants */,
@@ -245,8 +262,6 @@
 		5A7C67CB2BA1DA57003CC159 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
-				5A4B5E752BA9C4070053C730 /* CellCollectionView */,
-				5A4B5E742BA9C3F60053C730 /* TopCollectionView */,
 				5A7C67AD2BA1C6D9003CC159 /* SearchViewController.swift */,
 				5A7C67D82BA1DC9D003CC159 /* SearchViewControllerCoordinator.swift */,
 				5A09F5612BA47D3F006671B6 /* SearchViewModel.swift */,
@@ -307,25 +322,25 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		5A7C67E82BA21814003CC159 /* LoginOneModule */ = {
+		5A7C67E82BA21814003CC159 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				5A7C67E92BA21852003CC159 /* LoginOneViewController.swift */,
-				5A7C67EB2BA2186A003CC159 /* LoginOneViewControllerCoordinator.swift */,
-				5A7C67F02BA22FBB003CC159 /* LoginOneViewModel.swift */,
+				5A7C67E92BA21852003CC159 /* LoginViewController.swift */,
+				5A7C67EB2BA2186A003CC159 /* LoginViewControllerCoordinator.swift */,
+				5A7C67F02BA22FBB003CC159 /* LoginViewModel.swift */,
 			);
-			path = LoginOneModule;
+			path = LoginModule;
 			sourceTree = "<group>";
 		};
-		5A7C67ED2BA22C35003CC159 /* LoginTwoModule */ = {
+		5A7C67ED2BA22C35003CC159 /* CodeModule */ = {
 			isa = PBXGroup;
 			children = (
-				5A62FE012BA233E000743E93 /* LoginTwoViewController.swift */,
-				5A62FE032BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift */,
-				5A62FE052BA2340700743E93 /* LoginTwoViewModel.swift */,
+				5A62FE012BA233E000743E93 /* CodeViewController.swift */,
+				5A62FE032BA233F500743E93 /* CodeViewControllerCoordinator.swift */,
+				5A62FE052BA2340700743E93 /* CodeViewModel.swift */,
 				5A09F55A2BA36844006671B6 /* CodeView.swift */,
 			);
-			path = LoginTwoModule;
+			path = CodeModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7C67B42BA1C6D9003CC159 /* Find_Job.xcdatamodeld in Sources */,
+				5AC0EBE52BB83EA70076D4BC /* CollectionViewCoordinatorProtocol.swift in Sources */,
 				5A7C67D12BA1DB3D003CC159 /* FavoritesViewController.swift in Sources */,
 				5A4B5E812BA9C49E0053C730 /* CollectionViewCellViewModel.swift in Sources */,
 				5A3FCE542BAB306F001A06BC /* DetailVacancyViewModel.swift in Sources */,
@@ -415,22 +431,23 @@
 				5A7C67D32BA1DB4F003CC159 /* ResponsesViewController.swift in Sources */,
 				5A7C67CA2BA1CFB8003CC159 /* TabBarCoordinator.swift in Sources */,
 				5A4B5E792BA9C42E0053C730 /* TopCollectionViewCell.swift in Sources */,
-				5A62FE022BA233E000743E93 /* LoginTwoViewController.swift in Sources */,
-				5A62FE042BA233F500743E93 /* LoginTwoViewControllerCoordinator.swift in Sources */,
+				5A62FE022BA233E000743E93 /* CodeViewController.swift in Sources */,
+				5A62FE042BA233F500743E93 /* CodeViewControllerCoordinator.swift in Sources */,
 				5A7C67AE2BA1C6D9003CC159 /* SearchViewController.swift in Sources */,
 				5A4B5E772BA9C4210053C730 /* TopCollectionView.swift in Sources */,
-				5A7C67EA2BA21852003CC159 /* LoginOneViewController.swift in Sources */,
+				5A7C67EA2BA21852003CC159 /* LoginViewController.swift in Sources */,
 				5A4B5E7D2BA9C48C0053C730 /* CollectionView.swift in Sources */,
 				5A7C67DD2BA1DCBA003CC159 /* ResponsesViewControllerCoordinator.swift in Sources */,
 				5A62FE082BA23F6C00743E93 /* FavoritesViewModel.swift in Sources */,
-				5A62FE062BA2340700743E93 /* LoginTwoViewModel.swift in Sources */,
-				5A7C67EC2BA2186A003CC159 /* LoginOneViewControllerCoordinator.swift in Sources */,
+				5A62FE062BA2340700743E93 /* CodeViewModel.swift in Sources */,
+				5A7C67EC2BA2186A003CC159 /* LoginViewControllerCoordinator.swift in Sources */,
 				5A3FCE522BAB3060001A06BC /* DetailVacancyViewControllerCoordinator.swift in Sources */,
 				5A7C67D72BA1DB70003CC159 /* ProfileViewController.swift in Sources */,
 				5A7C67E42BA1E4E6003CC159 /* Extension.swift in Sources */,
-				5A7C67F12BA22FBB003CC159 /* LoginOneViewModel.swift in Sources */,
+				5A7C67F12BA22FBB003CC159 /* LoginViewModel.swift in Sources */,
 				5A7C67C42BA1CF7B003CC159 /* Coordinator.swift in Sources */,
 				5A7C67DB2BA1DCAF003CC159 /* FavoritesViewControllerCoordinator.swift in Sources */,
+				5AC0EBE32BB82E940076D4BC /* CollectionViewModelProtocol.swift in Sources */,
 				5A7C67E12BA1DCE5003CC159 /* ProfileViewControllerCoordinator.swift in Sources */,
 				5A7C67AA2BA1C6D9003CC159 /* AppDelegate.swift in Sources */,
 				5A09F5622BA47D3F006671B6 /* SearchViewModel.swift in Sources */,
@@ -438,7 +455,10 @@
 				5A7C67DF2BA1DCD7003CC159 /* MessagesViewControllerCoordinator.swift in Sources */,
 				5A7C67D52BA1DB5D003CC159 /* MessagesViewController.swift in Sources */,
 				5A7C67C82BA1CFAB003CC159 /* AppCoordinator.swift in Sources */,
+				5AB7BB722BB7078600101D35 /* FavoriteCollectionView.swift in Sources */,
+				5A45FEC22BB40C4900CB3998 /* QuestionView.swift in Sources */,
 				5A62FE0B2BA3094B00743E93 /* Constants.swift in Sources */,
+				5A45FEC42BB4709A00CB3998 /* VacanciesModels.swift in Sources */,
 				5A09F55B2BA36844006671B6 /* CodeView.swift in Sources */,
 				5A3FCE502BAB3040001A06BC /* DetailVacancyViewController.swift in Sources */,
 			);

@@ -19,6 +19,7 @@ class TopCollectionView: UICollectionView {
         self.dataSource = self
         self.delegate = self
         self.showsHorizontalScrollIndicator = false
+        self.backgroundColor = .black
     }
     
     required init?(coder: NSCoder) {

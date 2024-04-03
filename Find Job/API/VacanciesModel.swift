@@ -7,10 +7,11 @@
 
 import Foundation
 
+
 // MARK: - APIModel
 struct VacanciesModel: Codable {
     let offers: [Offer]
-    let vacancies: [Vacancy]
+    var vacancies: [Vacancy]
 }
 
 // MARK: - Offer
@@ -56,3 +57,4 @@ struct Experience: Codable {
 struct Salary: Codable {
     let full, short: String?
 }
+

@@ -11,7 +11,7 @@ class APIManager {
     
     static let shared = APIManager()
     
-    let urlString = "https://run.mocky.io/v3/ed41d10e-0c1f-4439-94fa-9702c9d95c14"
+    private let urlString = "https://run.mocky.io/v3/ed41d10e-0c1f-4439-94fa-9702c9d95c14"
     
     func getVacancy(_ completion: @escaping ([Vacancy]) -> ()) {
         let url = URL(string: urlString)!
@@ -23,11 +23,15 @@ class APIManager {
                 print("Success decoding")
                 completion(vacancyModel.vacancies)
             } else {
-                print("FAIL")
+                print("FAIL decoding")
+                completion(APIManager.defaultData)
             }
         }
         task.resume()
     }
-    
-
 }
+
+
+
+
+

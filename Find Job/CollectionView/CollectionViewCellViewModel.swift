@@ -8,22 +8,6 @@
 import UIKit
 
 class CollectionViewCellViewModel {
-
-    func formatPeopleCount(_ count: Int) -> String {
-        if count % 100 >= 11 && count % 100 <= 14 {
-            return "Сейчас просматривает \(count) человек"
-        } else {
-            switch count % 10 {
-            case 1:
-                return "Сейчас просматривает \(count) человек"
-            case 2, 3, 4:
-                return "Сейчас просматривает \(count) человека"
-            default:
-                return "Сейчас просматривает \(count) человек"
-            }
-        }
-    }
-    
     func formatDate(_ dateString: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

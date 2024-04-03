@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchViewController: UIViewController {
     
-    var viewModel: SearchViewModel?
+    var viewModel: CollectionViewModelProtocol?
+
+    let cellCollectionView = CollectionView()
+    
+    private let topCollectionView = TopCollectionView()
     
     private lazy var searchTextField: UITextField = {
         let view = UITextField()
@@ -49,8 +54,6 @@ class SearchViewController: UIViewController {
         return view
     }()
     
-    private let topCollectionView = TopCollectionView()
-    
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -79,18 +82,22 @@ class SearchViewController: UIViewController {
         return button
     }()
     
-    let cellCollectionView = CollectionView()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupConstraints()
-        cellCollectionView.viewModel = viewModel
         
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        renameRespondButton()
+        cellCollectionView.reloadData()
+    }
     
-    
+
     func renameRespondButton() {
         moreVacanciesButton.setTitle("\(viewModel?.numberOfVacancy() ?? "0")", for: .normal)
     }
@@ -103,7 +110,6 @@ class SearchViewController: UIViewController {
         view.addSubview(label)
         view.addSubview(cellCollectionView)
         view.addSubview(moreVacanciesButton)
-        renameRespondButton()
     }
     
     private func setupConstraints() {
