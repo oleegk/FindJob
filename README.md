@@ -13,7 +13,13 @@ Job search application.
 * Password entry screen
 * Home screen
 * Detailed information screen
-* Favorites screen 
+* Favorites screen
+
+## Example of application work
+
+
+https://github.com/oleegk/FindJob/assets/65504646/22b88d05-1f58-4f17-a42e-df02b126ea58
+
 
 
 ## Build locally
@@ -23,6 +29,4 @@ git clone https://github.com/oleegk/FindJob.git
 ```
 
 
-
-https://github.com/oleegk/FindJob/assets/65504646/3f1a23bf-3e72-4b2c-8f74-4efff8f52e1b
 
