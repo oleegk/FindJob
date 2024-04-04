@@ -11,23 +11,26 @@ Job search application.
 ## Application features
 
 ### Login screen
-![Login_screen](https://github.com/oleegk/FindJob/assets/65504646/095ed0b8-b3bd-4e61-9b19-c610dabb76bd)
+![Login_screen](https://github.com/oleegk/FindJob/assets/65504646/a4e48a5e-5a02-40c2-839f-6598f9bf2b99)
+
 
 ### Password entry screen
-![Password_entry_screen](https://github.com/oleegk/FindJob/assets/65504646/42cae040-4b99-4853-9da5-0833d3a010cd)
-![Password_entry_screen2](https://github.com/oleegk/FindJob/assets/65504646/640a5186-178d-40f8-bd9e-a68509ba147c)
+![Password_entry_screen](https://github.com/oleegk/FindJob/assets/65504646/eae0925b-3a7e-4a6e-8e62-0624ac88697d)   ![Password_entry_screen2](https://github.com/oleegk/FindJob/assets/65504646/55bfa912-5c48-47c5-9b5b-c605cbb9e757)
+
 
 ### Home screen
-![Home_screen](https://github.com/oleegk/FindJob/assets/65504646/428bc5ea-d9e1-4eb8-a272-c89742bb73ce)
+![Home_screen](https://github.com/oleegk/FindJob/assets/65504646/dbbd2c6e-047c-4989-a262-d190180cfaf7)
+
 
 ### Detailed information screen
-![Detailed_information_screen](https://github.com/oleegk/FindJob/assets/65504646/8f27418e-b4f5-4384-be89-86299be5f302)
-![Detailed_information_screen2](https://github.com/oleegk/FindJob/assets/65504646/d97d04be-ad1c-4867-9597-7d838073bf80)
+![Detailed_information_screen](https://github.com/oleegk/FindJob/assets/65504646/3698712e-f899-4925-9526-a3795d913753)   ![Detailed_information_screen2](https://github.com/oleegk/FindJob/assets/65504646/73544814-5c30-483d-a1ff-04a6aaafcfc3)
+
 
 ### Favorites screen
-![Favorites_screen](https://github.com/oleegk/FindJob/assets/65504646/97f6cf84-3946-4f0b-92ca-32cce31e063c)
-![Favorites_screen2](https://github.com/oleegk/FindJob/assets/65504646/390d4910-9174-44c2-acad-58513e7786d8)
-![Favorites_screen3](https://github.com/oleegk/FindJob/assets/65504646/5d1b0246-efa2-4d8b-b94a-1f1807a8a16c)
+![Favorites_screen2](https://github.com/oleegk/FindJob/assets/65504646/b932cff6-df3e-47f6-9530-c7204a690d11)   ![Favorites_screen](https://github.com/oleegk/FindJob/assets/65504646/6085f329-63e1-4434-bfd1-72ba895bc3fa)
+
+
+
 
 ## Example of application work
 
