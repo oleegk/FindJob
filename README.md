@@ -27,6 +27,7 @@ Job search application.
 ### Favorites screen
 ![Favorites_screen](https://github.com/oleegk/FindJob/assets/65504646/97f6cf84-3946-4f0b-92ca-32cce31e063c)
 ![Favorites_screen2](https://github.com/oleegk/FindJob/assets/65504646/390d4910-9174-44c2-acad-58513e7786d8)
+![Favorites_screen3](https://github.com/oleegk/FindJob/assets/65504646/5d1b0246-efa2-4d8b-b94a-1f1807a8a16c)
 
 ## Example of application work
 
